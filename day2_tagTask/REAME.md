@@ -10,3 +10,9 @@
           - Technique ใช้ การตัดค่าซ้ำโดยการใช้ new Set + ... เพื่อเอาข้อมูลเดิมด้วย
           - Dynamic Object Key Allocation การสร้าง key ใน object แบบ dynamic ด้วย if (!obj[key]) obj[key] = initialValue
 ```
+
+# Note
+```
+          การทำ Data Aggregation / Grouping ควรใช้ Set ช่วยตัดข้อมูลซ้ำในระดับ Item ก่อนนำไปนับรวม และต้องระวังเรื่อง Scope ของตัวแปรเมื่อมี Loop ซ้อนกัน รวมถึงการเขียน Code ป้องกันกรณี Property เป็น undefined เพื่อไม่ให้ระบบ Crash =>  if (!task.tags || task.tags.length === 0) (id: 5, title: "Refactor True", completed: true, ! )
+
+```
